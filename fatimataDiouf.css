@@ -1,0 +1,343 @@
+
+body
+{
+   background-image: url('img/im6.gif');
+}
+
+
+#container 
+{
+   display: flex;
+   justify-content: center;
+}
+
+.flex-items
+{
+   display: flex;
+   flex-wrap: wrap;
+   width: 83%;
+   justify-content:center;
+}
+
+
+
+#bloc2
+{
+   margin-left: 2px;
+}
+
+
+div#bloc22
+{
+   display: flex;
+   justify-content: space-between;
+}
+
+div#bloc21 img
+{
+   width: 589px;
+}
+
+div#bloc22 img
+{
+   width: 292px;
+}
+
+img 
+{
+   max-width: 100%;
+   height: auto;
+}
+
+
+div#bloc1
+{
+   margin-right: 4px;
+}
+  
+div#bloc1 , div#bloc21
+{
+    position:relative;
+}
+  
+div#bloc22
+{
+   display: flex;
+   justify-content: space-between;
+}
+  
+div#bloc22 div:first-child
+{
+   position:relative;
+}
+  
+div#bloc22 div:last-child
+{
+   position:relative;
+}
+  
+.p
+{
+   position: absolute;
+   margin: 0px;
+   top:0px;
+   left: 0px;
+   padding: 10px;
+   background-color: #A9D300;
+   color: white;
+}
+
+
+/*****************caroussel**********************************/
+
+#carrousel
+{
+  width:578px;
+  overflow: hidden;
+  border: 5px solid #A9D300;
+  border-radius: 8px;
+}
+
+div#bloc1 img 
+{
+   width: 578px;
+   height: 635px;
+  
+}
+
+div#bloc1
+{
+
+   display: flex;
+   animation-duration: 30s;
+   animation-name: mesImages;
+   animation-iteration-count: infinite; 
+}
+
+@keyframes mesImages {
+   0%{
+      transform: translateX(0);
+   }
+   20%{
+      transform: translateX(-578px);
+   }
+   40%{
+      transform: translateX(-1156px);
+   }
+   60%{
+      transform: translateX(-1734px);
+   }
+   80%{
+      transform: translateX(-2312px);
+   }
+   100%{
+      transform: translateX(0);
+   }
+}
+
+/**********************foot********************************/
+
+.containerFoot
+{
+   display: flex;
+   justify-content:space-around;
+   height:100px;
+}
+
+.containerFoot1
+{
+   background-color: antiquewhite;
+}
+
+.containerFoot1 #pp
+{
+   text-align: center;
+   margin: 6px;
+   padding-top: 7px;
+   padding-bottom: 2px;
+   font-size: 1.3em;
+   font-weight: bold;
+   font-family: Brush Script MT, Brush Script Std, cursive;
+   padding-top: 0;
+}
+
+footer div>div p 
+{
+   font-family: Bookman, URW Bookman L, serif;
+   font-weight: 500;
+   font-style: italic;
+   top: 0;
+}
+
+
+
+
+
+/***************************toggle**************************************/
+
+.imggg
+{
+    border: 5px solid #A9D300;
+    border-radius: 100px;
+}
+
+.headerr
+{
+    background: antiquewhite;
+    margin-bottom: 5px;
+}
+
+.navv
+{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+  
+}
+
+.menu li a
+{
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    color: black;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 1px #A9D300;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    margin: 0;
+    display: block;
+    padding: 15px;
+}
+
+li a:hover
+{
+   background-color:#A9D300 ;
+   color: white;
+}
+
+.logo 
+{
+   font-size: 2rem;
+}
+
+.toggle 
+{
+   display: none;
+}
+
+.menu
+{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   list-style: none;
+   width: 550px;
+
+}
+
+@media screen and (max-width :780px )
+{ 
+   .toggle{
+      display: block;
+      font-size: 2rem;
+      cursor: pointer;
+      position: relative;
+      z-index: 20;
+
+   }
+
+   .menu li a {
+      font-size: 1.3rem;
+   }
+
+   .menu{
+      z-index: 1;
+   }
+
+   .logo{
+      position: relative;
+      z-index:20 ;
+   }
+
+   .ouvrir 
+   {
+      display:block;
+   }
+
+   .fermer{
+      display: none;
+   }
+
+   .open .ouvrir{
+      display: none;
+   }
+
+   .open .fermer{
+      display: block;
+   }
+
+   .menu{
+      position: absolute;
+      top: 45px;
+      left: 0;
+      width:10%;
+      height: 80vh;
+      background: antiquewhite;;
+      flex-direction: column;
+      padding:2rem;
+      justify-content: space-around;
+      transform: translateX(-100%) ;
+      transition: 1s;
+   }
+
+   .open .menu {
+      transform: translateX(0);
+   }
+
+}
+
+  
+@media screen and (max-width :780px )
+{ 
+
+   #carrousel
+   {
+      height: auto;
+      margin-bottom: 3px;
+   }
+
+   div#bloc1 img 
+   {
+      height: auto;
+   }
+
+
+   @keyframes mesImages {
+      0%{
+         transform: translateX(0);
+      }
+      20%{
+         transform: translateX(-331px);
+      }
+      40%{
+         transform: translateX(-662px);
+      }
+      60%{
+         transform: translateX(-993px);
+      }
+      80%{
+         transform: translateX(-1324px);
+      }
+      100%{
+         transform: translateX(0);
+      }
+   }
+ 
+   .navv
+{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+}
